@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>AZeotropy CA Portal</title>
+     <link rel="shortcut icon" type="image/png" href="logo_fav.ico">
+     <meta charset="utf-8">
+     <meta name="google-site-verification" content="CdV6YWzOzMmNzBBYp3Hn-lht5NfJmFFel525xcCFWvE" />
+         <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+         
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" href="css/style1.css">
+     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="jquery.fullpage.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+     <header>
+        <div class="main">
+            <div class="logo"><img src="azeo.png"></div>
+            <nav  class="navbar navbar-fixed-top-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Benefits">Benefits</a></li>
+                    <li><a href="#Duties">Duties</a></li>
+                    <li><a href="#Register">Register</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+ </div>
+ <script type="text/javascript">
+     $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if(scroll < 50){
+            $('.main').css('background', 'transparent');
+        } else{
+            $('.main').css('background', 'rgba(0, 0, 0, 0.85)');
+        }
+    });
+ </script>
+           
+<nav role='navigation' class="n">
+  <div class="logomv"><img src="azeo.png" style="position: absolute;float: left;width: 70px;height: auto;margin-top: 9px;margin-left: 9px;"></div>
+  <div id="menuToggle">
+    
+    <input type="checkbox" />
+    
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    
+    <ul id="menu">
+      <a href="#Home"><li>Home</li></a>
+      <a href="#About"><li>About</li></a>
+      <a href="#Benefits"><li>Benefits</li></a>
+      <a href="#Duties"><li>Duties</li></a>
+      <a href="#Register"><li>Register</li></a>
+      <a href="#Contact"><li>Contact</li></a>
+      <a><li></li></a>
+      <a><li></li></a>
+      <a><li></li></a>
+      <a><li></li></a>
+      <a><li></li></a>
+      <a><li></li></a>
+      <a><li></li></a>
+      <a><li></li></a>
+    </ul>
+  </div>
+</nav>
+
+<style type="text/css">
+    
+a
+{
+  text-decoration: none;
+  color: #000;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: #ea4335;
+}
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 27px;
+  right: 30px;
+  height: 50px;
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ea4335 !important;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menuToggle input:checked ~ #menu{
+  box-shadow: 0 0 35px -10px black;
+}
+
+
+#menu
+{
+  height: 100vh;
+  position: absolute;
+  width: 50vw;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+  padding-bottom: -200px;
+  background: #fff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  -ms-overflow-y: auto;
+  overflow-y: auto;
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+</style>
+
+<script type="text/javascript">
+     $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        var hl = window.innerHeight*0.90;
+        if(scroll < hl){
+            $('#menuToggle span').css('background', '#fff');
+        } else{
+            $('#menuToggle span').css('background', '#ea4335');
+        }
+    });
+ </script>
+
+       
+    </header> 
+    
+     
+     <div id="Home">
+
+            <!--<div class="Home-heading"><br><h4>IIT Bombay's<br>Chemical Engineering Symposium</h4><br><h3>CAMPUS AMBASSADOR PROGRAM</h3>
+        </div><div class="Home-logo"><img src="azeo_logo3.png"><h3>AZeotropy - 2020</h3></div>-->
+        <h1 class="hh1" style="color: #ea4335;">AZeotropy IIT Bombay's</h1>
+        <h1 class="hh2" style="color: #fff;">CAMPUS <br>AMBASSADOR <br>PROGRAM</h1>
+        
+    </div>
+
+
+
+     <div id="About">
+         <div class="heading"><br><h4><span style="padding-bottom: 5px;border-bottom: 4px solid #ea4335;color: #ea4335;">About Us</span></h4></div>
+         <div class="video">
+         <video width="560" poster="/images/" controls>
+             <source src="1.mp4" type="video/mp4">
+         </video>
+         </div>
+         <div class="About-content1"><br><p style="font-weight: 900;text-align: justify;">AZeotropy is a two-day annual Chemical Engineering Symposium organized by the Chemical Engineering Department, IIT Bombay. We are a non-profit organization striving to bridge the gap between students, industry, and academia, and promoting it at a national level. The symposium witnesses participation from 300+ colleges from all over India, 10+ corporate houses and 50+ industrialists of the field.</p></div>   
+
+         <div class="About-content2">
+             <p style="font-weight: 900;text-align: justify;">We, at AZeotropy, give you a chance to showcase your leadership and organizational skills through our CAMPUS AMBASSADOR PROGRAM. A Campus Ambassador is the representative of AZeotropy in their respective colleges and his/her responsibility is to connect with the students who are enthusiastic to participate in the events and competitions conducted by AZeotropy. We are inviting registrations of students from colleges with programs such as chemical, petrochemical, and petroleum engineering.</p>
+         </div>
+
+     </div>
+
+     <div id="Benefits">
+         <div class="heading"><br><h4><span style="padding-bottom: 5px;border-bottom: 4px solid #ea4335; color: #ea4335;">Benefits</span></h4><br><br>
+         </div>
+         <div class="Ben">
+         <div class="page-content2">
+<span class="al">
+            <div class="flip-card3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="b1.png" alt="Avatar" style="width:150px;height:150px; margin-top: 0px;">
+                         <p style="font-size: 150%;color: #ea4335;">Interpersonal skills</p>
+                    </div>
+                    <div class="flip-card-back" style="justify-content: center;">
+                       <p style="font-size: 111%; margin-left: 12%;margin-right: 12%; margin-top: 9%;">Improve your communication and management skills. Compete with your co-participants and know yourself better!</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+        <span class="al">
+            <div class="flip-card3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="b2.png" alt="Avatar" style="width:150px;height:150px;">
+                         <p style="font-size: 150%;color: #ea4335;">Ambassador Of The Year</p>
+                    </div>
+                    <div class="flip-card-back"> 
+                        <p style="font-size: 111%; margin-left: 9.65%;margin-right: 9.65%; margin-top: 9%;">Best College Ambassador will be felicitated with Ambassador of the year for their exceptional work throughout the year</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+        <span class="al">
+            <div class="flip-card3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="b3.png" alt="Avatar" style="width:150px;height:150px;">
+                        <p style="font-size: 150%;color: #ea4335;">Accomodation</p>
+                    </div>
+                    <div class="flip-card-back" style="justify-content: center;">
+                        <p style="font-size: 111%; margin-left: 9.7%;margin-right: 9.7%; margin-top: 9%;">Top 3 Ambassadors will get free accommodation during AZeotropy event days and will find special mention in the CA portal for AZeotropy 2021</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+        <span class="al">
+            <div class="flip-card3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="b4.png" alt="Avatar" style="width:150px;height:150px;">
+                         <p style="font-size: 150%;color: #ea4335;">Certificate of Appreciation</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p style="font-size: 111%; margin-left: 12%;margin-right: 12%; margin-top: 9%;">Top 10 Ambassadors who put their best efforts in publicizing AZeotropy will be awarded a Certificate of Appreciation</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+    <div class="page-content3">
+<span class="al">
+            <div class="flip-card3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="t.png" alt="Avatar" style="margin-top:0px; width:150px;height:150px;">
+                         <p style="font-size: 150%;color: #ea4335;">Free Workshops</p>
+                    </div>
+                    <div class="flip-card-back" style="justify-content: center;">
+                        <p style="font-size: 111%; margin-left: 12%;margin-right: 12%; margin-top: 9%;">All Ambassadors get a chance of attending 2 workshops free of cost. Seize a chance to learn something new in the symposium this year!</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+        <span class="al">
+            <div class="flip-card3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="b6.png" alt="Avatar" style="width:150px;height:150px;">
+                         <p style="font-size: 150%;color: #ea4335;">Free T-Shirts</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p style="font-size: 111%; margin-left: 12%;margin-right: 12%; margin-top: 12%;">Top 10 Campus Ambassadors will receive free T-shirts of AZeotropy</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+         <span class="al">
+            <div class="flip-card3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="b7.png" alt="Avatar" style="width:150px;height:150px;">
+                         <p style="font-size: 150%;color: #ea4335;">Certificate</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p style="font-size: 111%; margin-left: 12%;margin-right: 12%; margin-top: 9%;">All ambassadors, actively involved with AZeotropy will be appreciated with a Certificate of Organization</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+        <span class="al">
+            <div class="flip-card3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="b4.png" alt="Avatar" style="width:150px;height:150px;">
+                         <p style="font-size: 150%;color: #ea4335;">Certificate of Appreciation</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p style="font-size: 111%; margin-left: 12%;margin-right: 12%; margin-top: 9%;">Top 10 Ambassadors who put their best efforts in publicizing AZeotropy will be awarded a Certificate of Appreciation</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>
+
+
+
+
+     </div>
+
+
+
+
+     <div id="Duties">
+         <div class="heading"><br><h4><span style="padding-bottom: 5px;border-bottom: 4px solid #ea4335; color: #ea4335;">Duties</span></h4></div><br><br>
+<div class="page">
+         <div class="page-content4">
+         <span class="al">
+            <div class="flip-card2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="d1.png" alt="Avatar" style="width:150px;height:150px;">
+                        <p style="font-size: 150%;color: #ea4335;">Point of Contact</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p style="font-size: 111%; margin-left: 7.5%;margin-right: 7.5%; margin-top: 9%;">Bridge the gap between your college participants, authorities and Team AZeotropy by the exchange of queries and information</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+
+        <span class="al">
+            <div class="flip-card2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="d2.png" alt="Avatar" style="width:150px;height:150px;">
+                        <p style="font-size: 150%;color: #ea4335;">Spreading Awareness</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p style="font-size: 111%; margin-left: 9%;margin-right: 9%; margin-top: 13.5%;">Share the latest activities of AZeotropy in your college groups through social media</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+
+        <span class="al">
+            <div class="flip-card2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="d3.png" alt="Avatar" style="width:150px;height:150px;margin-top: -12px;">
+                        <p style="font-size: 150%;color: #ea4335;">Organize<br>Chem-O-Philia</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p style="font-size: 111%; margin-left: 11%;margin-right: 8%; margin-top: 7.5%;">Coordinate with core team members of AZeotropy in organizing Chem-O-Philia Competition in your college</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+
+<div class="page-content5">
+<span class="al">
+            <div class="flip-card2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="iv" src="d4.png" alt="Avatar" style="width:150px;height:150px;">
+                        <p class="iv" style="font-size: 150%;color: #ea4335;">Conduct Events</p>
+                        <img class="fv" src="d3.png" alt="Avatar" style="width:150px;height:150px;margin-top: -12px;">
+                        <p class="fv" style="font-size: 150%;color: #ea4335;">Organize<br>Chem-O-Philia</p>
+                    </div>
+                    <div class="flip-card-back" style="justify-content: center;">
+                        <p class="iv" style="font-size: 111%; margin-left: 10%;margin-right: 10%; margin-top: 18%;">Organize events conducted by AZeotropy at ground levels</p>
+                        <p class="fv" style="font-size: 111%; margin-left: 11%;margin-right: 8%; margin-top: 7.5%;">Coordinate with core team members of AZeotropy in organizing Chem-O-Philia Competition in your college</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+        <span class="al">
+            <div class="flip-card2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="iv" src="d5.png" alt="Avatar" style="width:150px;height:150px;">
+                        <p class="iv" style="font-size: 150%;color: #ea4335;">Publicize AZeotropy</p>
+                        <img class="fv" src="d4.png" alt="Avatar" style="width:150px;height:150px;">
+                        <p class="fv" style="font-size: 150%;color: #ea4335;">Conduct Events</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="iv" style="font-size: 111%; margin-left: 9%;margin-right: 9%; margin-top: 12%;">Publicize AZeotropy and its latest activities in your college through posters and your networking skills</p>
+                        <p class="fv" style="font-size: 111%; margin-left: 10%;margin-right: 10%; margin-top: 18%;">Organize events conducted by AZeotropy at ground levels</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+        <span class="al">
+            <div class="flip-card2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="d5.png" alt="Avatar" style="width:150px;height:150px;">
+                        <p style="font-size: 150%;color: #ea4335;">Publicize AZeotropy</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p style="font-size: 111%; margin-left: 9%;margin-right: 9%; margin-top: 12%;">Publicize AZeotropy and its latest activities in your college through posters and your networking skills</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>
+     </div>
+
+
+     <div id="Register">
+         <div class="heading"><br><h4><span style="padding-bottom: 5px;border-bottom: 4px solid #ea4335; color: #ea4335;">Instructions</span></h4><br></div>
+         
+     </div>
+
+<div class="parallax" style="margin-top: -3px;">
+    <!--<h1 style="float: left;color: white;margin-top: 85px; margin-left: 87px;font-size: 50px;">Register Here</h1>
+    <h3 style="float: left;margin-top: 136px; margin-left: -150px;color: #379aff;">It's Only For you!</h3>-->
+    <!-- Trigger/Open The Modal -->
+    <div class="row" style="margin-left: 19%; margin-right: 19%;margin-top: -1.8px;padding-top: 3px;text-align: justify;">
+                <div class="Instructions">
+                    <ul>
+                        <br><li><h3>Make sure that you give your correct email id, as a verification mail will be sent to the same.</h3></li>
+                        <br><li><h3>Ensure that you enter all the fields correctly as you will be our point of contact.</h3></li>
+                        <br><li><h3>Under any circumstances do not register more than once.</h3></li>
+                        <br><li><h3>If by chance, you enter the wrong credentials, please contact us.</h3></li>
+                    </ul>
+                </div>
+            </div>
+<button id="myBtn" class="myBtn"><span>Click Here to Register</span></button>
+</div>
+
+<style type="text/css">
+  @media only screen and (max-width:1345px) {
+  .parallax{
+    height: 338px;
+  }
+}
+
+
+@media only screen and (max-width:1152px) {
+  
+  .Instructions{
+    font-size: 97%;
+  }
+
+  .myBtn{
+    margin-top: 17.5px;
+  }
+}
+
+@media only screen and (max-width:1104px) {
+  .parallax{
+    height: 360px;
+    margin-top: -3px !important;
+  }
+}
+
+@media only screen and (max-width:925px) {
+  
+  .Instructions{
+    font-size: 87%;
+  }
+
+  .parallax{
+    height: 360px;
+    margin-top: -2px;
+  }
+
+  .myBtn{
+    font-size: 16.5px;
+    padding: 13.5px;
+    margin-top: 40.1px;
+  }
+}
+
+@media only screen and (max-width:870px) {
+  .Instructions{
+    margin-right: -6%;
+    margin-left: -6%;
+  }
+}
+
+@media only screen and (max-width:829px) {
+  .myBtn{
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .Instructions{
+    margin-right: -9%;
+    margin-left: -9%;
+  }
+}
+
+@media only screen and (max-width:733px) {
+  .myBtn{
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width:702px) {
+  .myBtn{
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width:621px) {
+  .myBtn{
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-width:550px) {
+  .parallax{
+    margin-top: -12px !important;
+    margin-bottom: 4px !important;
+  }
+  .Instructions{
+    margin-left: -12%;
+    margin-right: -12%;
+  }
+}
+
+@media only screen and (max-width:497px) {
+  .myBtn{
+    margin-top: -20px !important;
+  }
+  .parallax{
+    height: 350px;
+  }
+}
+@media only screen and (max-width:472px) {
+  .parallax{
+    height: 369px;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .Instructions{
+    font-size: 85%;
+  }
+  .parallax{
+    height: 365px;
+    margin-bottom: 32px !important;
+  }
+}
+
+@media only screen and (max-width:429px) {
+  .parallax{
+    height: 385px;
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .parallax{
+    margin-bottom: 35px !important;
+  }
+}
+@media only screen and (max-width:375px) {
+  .Instructions{
+    font-size: 81%;
+    margin-left: -13.5%;
+    margin-right: -13.5%;
+  }
+  .parallax{
+    height: 365px;
+  }
+}
+
+@media only screen and (max-width:315px) {
+  .parallax{
+    height: 383px;
+  }
+}
+
+@media only screen and (max-width:306px) {
+  .parallax{
+    height: 402px;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .parallax{
+    margin-bottom: 0px !important;
+  }
+}
+
+</style>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+    <div class="modal-body">
+      
+<form class="box" action="" method="post">
+    <!--{% csrf_token %}-->
+    <span class="close">&times;</span>
+    <br><br><br>
+    <h1>REGISTRATION</h1><br>
+    <div class="page-content">
+    <input type="text" name="" placeholder="First Name" required>
+    <input type="text" name="" placeholder="Last Name" required>
+    </div>
+    <div class="page-content">
+    <input type="email" name="email" placeholder="Email" required id="email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" autocomplete="email">
+    <input type="email" name="emailConfirm" placeholder="Confirm Your Email" required id="confemail" onblur="confirmEmail()" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+    </div>
+    <div class="page-content">
+    <input type="tel" name="" placeholder="Mobile Number" required>
+    <input type="tel" name="" placeholder="Alternative Number (Optional)">
+    </div>
+    <div class="page-content sel">
+    <select name="" class="form-control" id="select2" style="text-align-last:center;">
+        <option value="" disabled selected>College State <p>&nbsp;⯆</p></option>
+    </select>
+    <select name="" class="form-control" id="select" style="text-align-last:center;">
+        <option value="" disabled selected>College Name <p>&nbsp;⯆</p></option>
+    </select> 
+    </div>
+    <div class="ad"><input type="text" name="" placeholder="College Address" required></div>
+    <div class="page-content sel">
+    <input type="text" name="" placeholder="Department" required>
+    <select name="" class="form-control" style="text-align-last:center;">
+        <option value="" disabled selected>Year Of Study <p>&nbsp;⯆</p></option>
+        <option value="First">First</option>
+        <option value="Second">Second</option>
+        <option value="Third">Third</option>
+        <option value="Forth">Forth</option>
+        <option value="Fifth">Fifth</option>
+    </select>
+    </div>
+    <input type="submit" name="" value="Register">
+<p style="color: #a9a9a9"><b>Note:</b> Please go through instructions before registration<br><br><br><br></p>
+</form>
+
+    </div>
+    
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+<script type="text/javascript">
+    function confirmEmail() {
+        var email = document.getElementById("email").value
+        var confemail = document.getElementById("confemail").value
+        if(email.toLowerCase() != confemail.toLowerCase()) {
+            alert('Email Not Matching!');
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    var select = document.getElementById("select"),
+    arr = ['AMITY UNIVERSITY RAJASTHAN', 'Adhiparashakti Engineering College, Kancheepuram Dist', 'Adhiyamaan College Of Engineering, Krishnagiri Dist', 'All India Shri Shivaji Memorial Society, College Of Engineering, Pune', 'All India Shri Shivaji Memorial Societys Polytechnic, Pune', 'All India Ssm Societys College Of Engineering, Pune', 'Anand Engineering College, Uttar Pradesh', 'Anna University, Chennai', 'Anuradha College Of Engineering, Buldana(Mah.)', 'Anuradha Engineering College, Buldana', 'Apex Institute Of Engineering And Technology, Jaipur', 'Assam Engg College, Assam', 'B.M.S.College Of Engineering, Bangalore', 'BIT Mesra, Ranchi', 'BITS Pilani, Rajasthan', 'Babu Banarasi Das National Institute of Technology and Management, Uttar Pradesh', 'Backward Class Youth R.Communication, Nagpur', 'Banasthali University, Tonk(Rajasthan)', 'Bapuji Inst Of Engg And Tech, Davangere', 'Beant College Of Engg. And Technology, Amritsar(Punjab)', 'Behrampur University, Gandhi Institute Of Technology, Orissa', 'Bharat Institute Of Technology, Uttar Pradesh', 'Bharat Shikshan Sansthas Pimpri Chinchwad Polytechnic, Pune', 'Bharathidasan Institute Of Engineering And Technology, Tiruchirappalli', 'Bharati Vidyapeeth College Of Engineering, Pune', 'Bharati Vidyapeeths Institutet.Of Technology, Mumbai', 'Bharati Vidyapeeths J.N.Instt.Of Tech, Pune', 'Bharti Vidhyapeeth Mumbai', 'Bhavana Trusts Shah And Anchor Kutchi Polytechnic, Mumbai', 'Bhoj Reddy Engineering College For Women, Hyderabad', 'Bits Goa', 'Bundelkhand Institute Of Engineering And Technology, Jhansi', 'C.R. State College Of Engg, Haryana', 'C.V. Raman College Of Engineering, Bhubhaneshwar', 'Central Electro Chemical Resarch Institute, Karaikudi', 'Chaitanya Bharathi Institute Of Technology,  Gandhipet, Hyderabad', 'Coimbatore Institute Of Technology', 'College Of Engg. And Technology, Akola', 'College Of Engineering And Technology, Jalgaon', 'College Of Engineering Pune', 'D V R College Of Engineering And Technology', 'D. G. Ruparel College, Mumbai', 'DIT Dehradun', 'Datta Meghe College Of Engineering, Thane', 'Dayanand Sagar College Of Engineering, Bangalore', 'Deenbandhu Chhotu Ram University of Science & Technology,Murthal,Haryana', 'Delhi College Of Engineering., Shahbad Daulatpura', 'Dharmsinh Desai Institute Of Technology, Nadiad, Kheda', 'Dr Navalar Nedunchezhian College Of Engineering, Vaithiyanathapuram, Tholudur', 'Dr. Ambedkar Inst. Of Teach. Of Handicapped, Kanpur', 'Dr. B.R. Ambedkar National Institute Of Technology, Jalandhar', 'Dr. B.R. Ambedkar National Institute Of Technology, Punjab', 'Dr. Babasaheb Ambedkar Marathwada University, Aurangabad', 'Dr. K.N. Modi Institute Of Engineering And Tech, Up', 'Dr. SS Bhatnagar UICET Panjab University', 'Dr.Babasaheb Ambedkar Technological University(Inst. Of Petrochemical Engg)', 'Dr.D.Y.Patil Pratishthan D.Y. Patil College Of Engineering And Tech, Pune', 'Dr.\xa0S. S. Bhatnagar\xa0University Institute of Chemical Engineering & Technology, Punjab', 'Durgapur Institute Of Advanced Tech And Management, West Bengal', 'Dwarkadas J.Sanghvi College Of Engg., Mumbai', 'Edayathangudi G.S. Pilay Engineering College, Nagore', 'Erode Sengunthar Engineering College, Thudupathi', 'Faculty Of Engineering And Technology, Up', 'Faculty Of Technology And Engg, M.S.Univ Of Baroda', 'G.H. Patel College Of Engg. And Technology, Bakool Road, Vallabh Vidyanagar Dist Anand', 'GURU GHASIDASH VISHWAVIDYALAYA BILASPUR (CG)', 'Gandhi Institute Of Engg. And Tech., Rayagada', 'Gayatri Vidya Prasihad College Of Engineering, Visakhapatnam', 'Gharda Institute Of Technology, Ratnagiri', 'Gokul Institute Of Technology And Science , Ap', 'Government College Of Engineering And Textile Technology, Hoogly', 'Government Engineering College, Gandhinagar', 'Government Engineering College,Valsad, Gujarat', 'Government. Engineering College, Kerala', 'Government. Engineering College, Vivattom Thrissur', 'Govt. Engineering College , Gandhi Nagar', 'Govt. Polytechnic, Arvi(Mah.)', 'Govt. Polytechnic, Aurangabad', 'Govt. Polytechnic, Raigarh', 'Govt. Polytechnic, Thane', 'Govt. Polytechnic, Yavatmal (MAH.)', 'Haldia Institute Of Technology, Haldia', 'Harcourt Butler Technological Institute, Kanpur', 'Hindustan College Of Science And Technology, Agra', 'Homi Bhabha National Institute, Mumbai', 'Hope Foundation And Research Centre, Finolex Academy Of Management And Tech, Ratnagiri', 'IIT Bhubaneswar, Odisha', 'IIT Bombay, Maharashtra', 'IIT Delhi, New Delhi', 'IIT Gandhinagar, Gujarat', 'IIT Guwahati, Assam', 'IIT Hyderabad, Andhra Pradesh', 'IIT Indore, Madhya Pradesh', 'IIT Jodhpur, Rajasthan', 'IIT Kanpur, U.P.', 'IIT Kharagpur, W.B.', 'IIT Madras, Tamilnadu', 'IIT Mandi, Himachal Pradesh', 'IIT Patna, Bihar', 'IIT Roorkee, Uttarakhand', 'IIT Ropar, rupnagar, Punjab', 'IIT Varanasi, BHU, UP', 'ISM Dhanbad, Jharkhand', 'Indian Institute of Information Technology and Management (ABV-IIITM),\xa0Gwalior', 'Indira Gandhi Institute Of Technology, Dhenkanal', 'Institute Of Chemical Technology, Mumbai', 'Institute Of Engineering And Sciences, Indore', 'Institute Of Engineering And Technology, Ap', 'Institute Of Engineering And Technology, Bareilly', 'Institute Of Engineering And Technology, Haryana', 'Institute Of Engineering And Technology, Kanpur', 'Institute Of Engineering And Technology, Lucknow', 'Institute Of Engineering, Jiwaji University, Gwalior', 'Institute Of Technology And Management, Gwalior', 'Institute Of Technology Howrah', 'Institute Of Technology, Banaras Hindu University', 'Institute Of Technology, Gmr Nagar, Ap', 'Institute Of Technology, Guru Ghasidas University, Koni, Bilaspur, Chhattisgarh', 'Institute Of Technology, Sangli', 'Jadavpur University, Jadavpur, Calcutta', 'Jagannath Instt For Tech. And Management, Orissa', 'Jawaharlal Darda Institute Of Engineering And Technology Gandhi Bhavan', 'Jawaharlal Nehru College, Aurangabad', 'Jawaharlal Nehru Engineering College, Pune', 'Jaypee University of Engg and Tech., Guna, Madhya Pradesh', 'Jld Institute Of Engineering, Yavatmal(Mah.)', 'Jpml Institute Of Engineering, Haryana', 'K. K. Wagh College Of Engineering Education And Research, Nashik', 'K.K. Wagh Womens Polytechnic, Nasik', 'K.K.Wagh Institute Of Engineering Education And Research, Pune', 'K.L.E Society College Of Engg. And Tech, Karnataka', 'Kes College Of Engineering, Raigarh', 'Khalapur Taluka Shikshan P. Mandals Khopoli Polytechnic, Raigarh', 'Kolhapur Institute Of Technology', 'Koneru Lakshmaiah University, Andhra Pradesh', 'Kongu Engineering College, Perundurai, Erode Dist', 'L.D.College Of Engineering, Near Gujarat University Navrangpura, Ahmedabad', 'Laxminarayan Institute Of Technology, Nagpur', 'Lovely Professional University, Punjab', 'M.B.M. Engg College, Jodhpur', 'MJP Rohilkhand university, Uttar Pradesh', 'Madhav Instt. Of Tech. And Science, Gwalior(Mp)', 'Maharaj Vijayaram Gajapathiraj College For Engineering, Ap', 'Maharashtra Institute Of Technology, Pune', 'Mahatma Gandhi Mission College Of Engineering And Technology, Thane', 'Mahatma Gandhi Mission Jawaharlal Nehru College Of Engg., Aurangabad', 'Malaviya National Institute Of Technology, Jaipur', 'Marathwada Univesity, Aurangabad', 'Marwadi Education Foundation Group of Institutions, Gujarat', 'Meerut Institute Of Engineering And Technology, Meerut', 'Mohammed Sathak Engineering College, Ramanathapuram Dist', 'Moradabad Institute Of Techhnology, Up', 'Motilal Nehru National Institute Of Technology, Allahabad', 'Mvj College Of Engg. Channasandra, Karnataka', 'N.Y.S.S.S Shreeram Polytechnic, Thane', 'NIT Bhopal', 'NIT Calicut, Kerala', 'NIT Delhi, New Delhi', 'NIT Durgapur, W.B.', 'NIT Goa, Farmagudi, Goa', 'NIT Hamirpur, Himachal Pradesh', 'NIT Imphal, Manipur', 'NIT Jaipur, Rajasthan', 'NIT Jalandhar, Punjab', 'NIT Jamshedpur, Jharkhand', 'NIT Kurukshetra, Haryana', 'NIT Meghalaya', 'NIT Mizoram', 'NIT Nagaland', 'NIT Nagpur, Maharashtra', 'NIT Patna, Bihar', 'NIT Puducherry, Pondicherry', 'NIT Rourkela, Rourkela, Odisha', 'NIT Sikkim', 'NIT Silchar, Assam', 'NIT Srinagar, J & K', 'NIT Surat, Gujarat', 'NIT Surathkal, Karnataka', 'NIT Trichy, Tamil Nadu', 'NIT Uttarakhand', 'NIT Warangal, Andhra Pradesh', 'Nagar Yuwak Shikshan Sansthas Shri Datta Meghe Polytechnic, Nagpur', 'Nalla Malla Reddy Engineering College, Ap', 'Narayan Nagu Patil Engineering College, Mumbai', 'National Institute Of Industrial Engineering, Mumbai', 'National Institute Of Technology Calicut, Kerala', 'National Institute Of Technology Mahatma Gandhi Avenue, Durgapur, Burdwan', 'Navjeevan Education Societys Polytechnic, Bhandup', 'Nirma Institute Of Technology', 'Nit Raipur', 'Nit Raipur, Raipur, Chattisgarh', 'North Maharashtra University, Jalgaon', 'North Maharashtra University, Jalgaon', 'Osmania University', 'Padmabhooshan Vasantdada Patil Institute Of Technology', 'Padmashri Dr. B.V.raju institute of technology, Andhra Pradesh', 'Pallavan College Of Engineering, Kancheepuram Taluk And Tamil Nadu', 'Pondicherry Engg. College, Pondicherry', 'Pravara Rural College Of Engineering, Mumbai', 'Priyadarshini Institute Of Engineering And Tech, Shivangaon', 'Punjab University, Chandigarh', 'R V College Of Engg., Bangalore', 'R V R & J C College Of Engineering, AP', 'RGIPT, U.P.', 'RGU-IIIT BASAR, AP', 'Raipur Institute Of Tech, Chhattisgarh', 'Rajiv Gandhi University of Knowledge Technologies, Nuzvid, AP', 'S.B.S. College Of Engg. And Technology, Ferozpur', 'S.C.Ri.E.T. , C.C.S. University Campus, Meerut, UP', 'S.D. College Of Engineering And Technology, Muzaffarnagar(Up)', 'S.D.M College Of Engg And Tech, Dharwad', 'S.S.N COLLEGE OF ENGINEERING CHENNAI', 'S.V.National Institute Of Technology, Surat', 'SLIET, Sangrur, Punjab', 'SREE NIDHI INSTITUTE OF SCIENCE & TECHNOLOGY, A.P.', 'Samarth Samajs S.H.Jondhale Polytechnic, Thane', 'Samrat Ashok Technological Institute ,Vidisha, M.P.', 'Sant Gadge Baba Amravati University', 'Sant Harchand Singh Longowal Central Inst. Of Engg And Tech, Longowal, Punjab', 'Sarvajanik College Of Engg. And Technology, Surat', 'Sastra University, Thirumalaisamudram', 'Satara Education Societys Polytechnic, Satara', 'Seedling Academy Of Design Tech. And Mngt, Jaipur', 'Seth Jai Parkash Mukand Lal Inst. Of Engg And Tech., Haryana', 'Shivajirao S. Jondhale College Of Engg, Dombivli', 'Shivajirao S. Jondhole College Of Engineering, Thane', 'Shree Sant Muktabai Instt.Of Tech.(POLY), Jalgaon', 'Shri Bhagubhai Mafatlal Poly, Mumbai', 'Shri Guru Gobind Singhji Institute of Engineering & Technology, Nanded, Maharashtra', 'Shri Sad Vidya Mandirs College Of Engineering And Technology, Gujarat', 'Sinhagad College of Engineering, Maharashtra', 'Sinhgad College Of Engineering, Pune', 'Sir Visvesvaraya Memorial Engineering College, Nashik', 'Sri Ram Engineering College, Tiruvallur', 'Sri Ramakrishna Engineering College, Tamil Nadu', 'Sri Sivasubramaniya Nadar College Of Engineering, Kacheepuram', 'Sri Venkateswara College Of Engineering, Tamil Nadu', 'St. Josephs Colllege Of Engineering, Tamil Nadu', 'St. Peters Engineering College, Tamil Nadu', 'St. Stanley College Of Engineering And Technology, Ap', 'Suresh Gyan Vihar University, Rajasthan', 'Swami Dayanand University, Choturam State College Of Engineering, Sonepat', 'Swami Ramanandatirtha Institute Of Science And Technology, Nalgonda Distt., Andhra Pradesh', 'T.K.M. College Of Engg., Kollam, Kerala', 'T.K.M. College Of Engg., Kollam, Kerala', 'Tatya Saheb Kore Institute Of Engineering And Tech., Kolhapur', 'Thadomal Shahani Engineering College', 'Thapar Institute Of Engineering And Technology, Punjab', 'The Maharaja Sayaji Rao University, Baroda(Gujarat)', 'Thirumalai Engineering College, Tamil Nadu', 'UIT - Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal', 'Ujjain Engineering College', 'University College Of Sciences And Technology, Calcutta', 'University College Of Technology, Hyderabad', 'University Of Petroleum And Energy Studies, Dehradun', 'V.R. Siddhartha Engineering College, AP', 'Vel Sri Rangarajan Sakunthala High Technology Engineering College, Chennai', 'Vidya Prasarak Mandal Polytechnic, Thane', 'Vignan Engineering College, Ap', 'Vishveshvarya National Institute Of Technology, Nagpur', 'Vishwakarma Institute Of Technology, Pune', 'Vivekananda Institute Of Technology, Bangalore', 'WAINGANGA COLLEGE OF ENGINEERING AND MANAGEMENT, Maharashtra', 'Watemull Institute Of Electrical Engineering, Mumbai', 'Zakir Hussain College Of Engg And Technology, Aligarh'];
+
+    for (var i = 0; i < arr.length; i++) {
+        var option = document.createElement ("OPTION"),
+        txt = document.createTextNode(arr[i]);
+        option.appendChild(txt);
+        option.setAttribute("value",arr[i]);
+        select.insertBefore(option,select.lastChild);
+    }
+
+
+    var select2 = document.getElementById("select2"),
+    arr2 = ["Andaman and Nicobar Islands", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh", "Chhattisgarh", "Dadra and Nagar Haveli", "Daman and Diu", "National Capital Territory of Delhi union territory", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Lakshadweep", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Pondicherry", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"];
+
+    for (var i = 0; i < arr2.length; i++) {
+        var option2 = document.createElement ("OPTION"),
+        txt2 = document.createTextNode(arr2[i]);
+        option2.appendChild(txt2);
+        option2.setAttribute("value",arr2[i]);
+        select2.insertBefore(option2,select2.lastChild); 
+        }   
+
+</script>
+
+
+<script>
+$('select').on('change', function() {
+  if ($(this).val()) {
+return $(this).css('color', 'white');
+  }
+});
+</script>
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content */
+.modal-content {
+  
+  position: relative;
+  background-color: #191919;
+  margin: auto;
+  margin-top: -90px !important;
+  margin-bottom:108px !important;
+  border: 1px solid #888;
+  width: 683px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  overflow:scroll;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+}
+</style>
+
+     <div class="CAs" style="padding-top:45px;color: #fff;">
+         <div class="heading2"><br><h4 style="line-height: 60px;padding-left: 9px; padding-right: 9px;"><span class="ch" style="padding-bottom: 5px;border-bottom: 4px solid #ea4335; color: #ea4335;">Top 3 CAMPUS AMBASSADORS Of Azeotropy 2019</span></h4></div>
+<div class="Cp">
+<div id="curve" class="pcard">
+    <div class="f">
+        
+        <div class="inf">
+            <div style="color:#fff;font-weight: bolder;padding-top: 5px;margin-left: -50%;">CAName</div>
+            <div style="color:#fff;margin-top: 10px;margin-left: -27.6%;">COLLEGE NAME</div>
+        </div>
+    </div>
+    <div class="pcard-blur"></div>
+</div>
+
+<div id="curve" class="pcard">
+    <div class="f">
+        
+        <div class="inf">
+            <div style="color:#fff;font-weight: bolder;padding-top: 5px;margin-left: -50%;">CAName</div>
+            <div style="color:#fff;margin-top: 10px;margin-left: -27.6%;">COLLEGE NAME</div>
+        </div>
+    </div>
+    <div class="pcard-blur"></div>
+</div>
+
+<div id="curve" class="pcard">
+    <div class="f">
+        
+        <div class="inf">
+            <div style="color:#fff;font-weight: bolder;padding-top: 5px;margin-left: -50%;">CAName</div>
+            <div style="color:#fff;margin-top: 10px;margin-left: -27.6%;">COLLEGE NAME</div>
+        </div>
+    </div>
+    <div class="pcard-blur"></div>
+</div>
+</div>
+
+
+<style>
+
+.pcard {
+    border-radius: 6px;
+    position: relative;
+    display: inline-block;
+    height: 360px;
+    width: 270px;
+    margin: 40px;
+    background-image: url(d.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 45px -10px black;
+    overflow: hidden;
+    max-width: 315px;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.pcard-blur {
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 1px);
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+
+.pcard:hover .pcard-blur {
+    opacity: 0.6;
+}
+
+.f {
+    z-index: 1;
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.inf {
+  font-family: Inconsolata;
+    padding-left: 20px;
+    transform: translateY(250px);
+
+    transition: transform 0.45s cubic-bezier(.31,1.21,.64,1.02);
+}
+
+.pcard:hover .inf {
+    transform: translateY(0px);
+    color:#fff;
+}
+
+
+.CAs{
+            background-color: #f0f4f6;
+            height: 600px; 
+         }
+
+
+
+@media only screen and (max-width:1350px) {
+
+.pcard{
+  width: 243px;
+  height: 324px;
+  margin: 1.5vw 25px;
+}
+
+}
+
+@media only screen and (max-width:1127px) {
+  .pcard{
+    margin: 20.5px 136px;
+  }
+  
+  .Cp{
+  height: 1105.5px;
+  width: 75vw;
+  margin-top: 613.5px;
+}
+.CAs{
+  height: 1337px;
+}
+}
+
+@media only screen and (max-width:1127px) and (min-width:980px) {
+  .pcard:nth-child(3) {
+  margin-top: 21px;
+  }
+}
+
+@media only screen and (max-width:1002px) {
+  .Cp{
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width:918px) {
+  .Cp{
+    margin-top: 613px;
+  }
+  .CAs{
+    height: 1336.5px;
+  }
+}
+
+
+@media only screen and (max-width:800px) {
+  .Cp{
+    width: 67.5vw;
+  }
+}
+
+
+@media only screen and (max-width:856px) {
+  .CAs{
+    height: 1396px !important;
+  }
+}
+
+
+@media only screen and (max-width:824px) {
+  .CAs{
+    height: 1397px !important;
+  }
+}
+
+
+
+@media only screen and (max-width:775px) {
+  .pcard{
+    margin: 20px 20px;
+  }
+}
+
+
+@media only screen and (max-width:645px) {
+  .pcard{
+    margin: 3vw;
+  }
+}
+
+
+@media only screen and (max-width:600px) {
+  .pcard{
+    margin: 20px -3vw;
+  }
+}
+
+
+@media only screen and (max-width:550px) {
+  .Cp{
+    margin-top: 609px;
+  }
+  .CAs{
+    height: 1401px !important;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .Cp{
+    height: 1105.5px !important;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .pcard{
+  width: 200px;
+  height: 270px;
+  margin: 20px 2.1px;
+  }
+  .heading2 h4{
+    line-height: 45px !important;
+  }
+  .ch{
+    padding-bottom: 1.5px !important;
+    border-bottom: 3px solid #ea4335 !important;
+  }
+  .Cp{
+    height: 944px !important;
+    margin-top: 531px;
+  }
+  .CAs{
+    height: 1212px !important;
+  }
+}
+@media only screen and (max-width:400px) {
+  .Cp{
+    margin-top: 527px;
+  }
+  .CAs{
+    height: 1208px !important;
+  }
+}
+
+@media only screen and (max-width:355px) {
+  .pcard{
+    margin: 20px -6vw;
+  }
+}
+
+</style>
+
+     </div>
+
+
+     <div id="Contact">
+        
+         <div class="heading"><br><h4><span style="padding-bottom: 5px;border-bottom: 4px solid #ea4335; color: #ea4335;">Contact Us</span></h4></div>
+         <div class="Cont">
+
+
+         <figure class="snip1531">
+  <img class="imgs" src="d.png" alt="sample17"/>
+  <figcaption style="color:#fff;margin-top: 183px;">
+    <h3>Name</h3>
+    <p>Public Relations Manager</p>
+    <div class="icons"><a><i class="ion-social-facebook"></i></a><a><i class="ion-social-dropbox"></i></a><a><i class="ion-social-instagram-outline"></i></a><a><i class="ion-social-rss"></i></a></div>
+  </figcaption>
+</figure>
+
+<figure class="snip1531"><img class="imgs" src="d.png" alt="sample3"/>
+  <figcaption style="color:#fff;margin-top: 183px;">
+    <h3>Name</h3>
+    <p>Public Relations Manager</p>
+    <div class="icons"><a><i class="ion-social-dribbble-outline"></i></a><a><i class="ion-social-dropbox"></i></a><a><i class="ion-social-instagram-outline"></i></a><a><i class="ion-social-rss"></i></a></div>
+  </figcaption>
+</figure>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.snip1531 {
+  font-family: 'Lato', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+ 
+
+  width: 100%;
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.2em;
+  text-align: center;
+  left: 0%;
+  margin: 70px;
+  margin-top: 3%;
+  box-shadow: 0 0 70px -10px black;
+  height: 330px; 
+  width: 304px;
+}
+
+.imgs{
+  height: 330px; width: 304px;border: 12px solid white;
+}
+
+@media only screen and (max-width:1150px) {
+
+.snip1531{
+  width: 273.6px;
+  height: 300px;
+  margin: 40.5px 5vw;
+}
+.imgs{
+  width: 273.6px;
+  height: 300px;
+}
+.Cont{
+  margin-top: 265px;
+}
+}
+
+@media only screen and (max-width:1127px) {
+  .Cont{
+    width: 75vw;
+  }
+}
+
+@media only screen and (max-width:1002px) {
+  .snip1531:nth-child(2) {
+    margin-top: 20px;
+  }
+#Contact{
+  height: 965px;
+}
+.Cont{
+  height: 747px;
+  width: 70vw;
+  margin-top: 443px;
+}
+}
+
+@media only screen and (max-width:800px) {
+  .Cont{
+    width: 67.5vw;
+  }
+}
+
+@media only screen and (max-width:550px) {
+  #Contact{
+  height: 956px;
+}
+}
+
+@media only screen and (max-width:450px) {
+  #Contact{
+  height: 782px;
+}
+}
+
+
+
+@media only screen and (max-width:500px) {
+  .Cont{
+    margin-top: 443px !important;
+  }
+}
+.snip1531 *,
+.snip1531 *:before,
+.snip1531 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.snip1531:before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  content: '';
+  background-color:  rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  color:#fff;
+}
+
+.snip1531 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.snip1531 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  padding: 0 30px;
+
+}
+
+@media only screen and (max-width: 1150px) and (min-width: 450px) {
+.snip1531 figcaption {
+  padding-bottom: 30px;
+}
+}
+
+
+@media only screen and (max-width:600px) {
+  .snip1531 {
+    margin: 40.5px -5vw;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .snip1531{
+  width: 210px;
+  height: 225px;
+  margin-top: 28.5px;
+  }
+  .imgs{
+  width: 210px;
+  height: 225px;
+}
+.snip1531 figcaption {
+  margin: 0 -20px !important;
+  margin-top: 70px !important;
+}
+
+.Cont{
+  height: 572px;
+  margin-top: 356px !important;
+}
+
+}
+
+.snip1531 h3 {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+.snip1531 p {
+  margin: 0 0 10px;
+  opacity: 0.6;
+}
+
+.snip1531 .icons {
+  width: 100%;
+}
+
+.snip1531 a {
+  margin: 2px;
+  display: inline-block;
+}
+
+.snip1531 a i {
+  background-color: #333333;
+  border-radius: 3px;
+  color: #000000;
+  display: block;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  width: 34px;
+}
+
+.snip1531 a i:before {
+  color: #fff;
+}
+
+.snip1531 a i:hover {
+  background-color: #D2B17F;
+  cursor: pointer;
+}
+
+.snip1531:hover:before,
+.snip1531.hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.snip1531:hover figcaption,
+.snip1531.hover figcaption {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+
+</style>
+<script>
+
+$(".hover").mouseleave(
+  function() {
+    $(this).removeClass("hover");
+  }
+);
+</script>
+
+
+
+</div>
+     </div>
+
+     <div class="footer">
+
+    
+<section id="lab_social_icon_footer">
+        <!-- Include Font Awesome Stylesheet in Header -->
+        <div class="container">
+                <div class="text-center center-block">
+                        <a target="_blank" href="https://www.facebook.com/AZeotropy"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/azeotropy/"><i id="social-li" class="fa  fa-linkedin-square fa-3x social"></i></a>
+        
+                        <a target="_blank" href="mailto:registrations@azeotropy.org"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
+        </div>
+        </section>
+        
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <style>
+    
+#lab_social_icon_footer {
+  padding: 20px 0;
+  background-color: black; 
+}
+
+#lab_social_icon_footer a {
+  color: white;
+}
+
+#lab_social_icon_footer .social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#lab_social_icon_footer .social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+  
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/*
+    Multicoloured Hover Variations
+*/
+
+#lab_social_icon_footer #social-fb:hover {
+  color: #3B5998;
+}
+
+#lab_social_icon_footer #social-li:hover {
+  color: #0077B5;
+}
+
+#lab_social_icon_footer #social-em:hover {
+  color: #B23121;
+}
+    </style>
+     </div>
+     <style>
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+</style>
+</body>
+</html>
